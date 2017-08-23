@@ -1,0 +1,74 @@
+<!-- Generated template for the VideoCarouselComponent component -->
+
+<ion-slides pager>
+
+    <ion-slide *ngFor="let video of data">
+        <ion-card>
+            <ion-card-header (click)="playVideo(video)">
+                VIDEOS
+            </ion-card-header>
+            <video width="100%" controls poster="{{video.poster}}">
+                <source [src]="video.url" type="video/mp4">
+            </video>
+            <ion-card-content>
+                <ion-card-title>
+                    {{video.title}}
+                </ion-card-title>
+                <p>
+                    {{video.description}}
+                </p>
+            </ion-card-content>
+        </ion-card>
+    </ion-slide>
+
+    <!--
+    <ion-slide>
+        <ion-card>
+            <video width="100%" controls>
+                <source src="http://techslides.com/demos/sample-videos/small.mp4" type="video/mp4">
+            </video>
+            <ion-card-content>
+                <ion-card-title>
+                    Nine Inch Nails Live
+                </ion-card-title>
+                <p>
+                    The most popular industrial group ever, and largely
+                    responsible for bringing the music to a mass audience.
+                </p>
+            </ion-card-content>
+        </ion-card>
+    </ion-slide>
+    <ion-slide>
+        <ion-card>
+            <video width="100%" controls>
+                <source src="http://techslides.com/demos/sample-videos/small.mp4" type="video/mp4">
+            </video>
+            <ion-card-content>
+                <ion-card-title>
+                    Nine Inch Nails Live
+                </ion-card-title>
+                <p>
+                    The most popular industrial group ever, and largely
+                    responsible for bringing the music to a mass audience.
+                </p>
+            </ion-card-content>
+        </ion-card>
+    </ion-slide>
+    <ion-slide>
+        <ion-card>
+            <video width="100%" controls>
+                <source src="http://techslides.com/demos/sample-videos/small.mp4" type="video/mp4">
+            </video>
+            <ion-card-content>
+                <ion-card-title>
+                    Nine Inch Nails Live
+                </ion-card-title>
+                <p>
+                    The most popular industrial group ever, and largely
+                    responsible for bringing the music to a mass audience.
+                </p>
+            </ion-card-content>
+        </ion-card>
+    </ion-slide>
+    -->
+</ion-slides>
