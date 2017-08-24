@@ -1,3 +1,4 @@
+import { Platform } from 'ionic-angular';
 import { Component, Input } from '@angular/core';
 
 import { VideoPlayer } from '@ionic-native/video-player';
@@ -15,6 +16,7 @@ import { VideoPlayer } from '@ionic-native/video-player';
 export class VideoCarouselComponent {
 
     data: any;
+    isAndroid: boolean = false;
 
     @Input()
     set infoVideos(videos: Array<Object>) {
@@ -23,8 +25,9 @@ export class VideoCarouselComponent {
     }
 
 
-    constructor(private videoPlayer: VideoPlayer) {
+    constructor(private videoPlayer: VideoPlayer, public platform: Platform) {
         console.log('Hello VideoCarouselComponent Component');
+        this.isAndroid = this.platform.is('android');
     }
 
     playVideo(video) {

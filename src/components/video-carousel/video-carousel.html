@@ -6,7 +6,7 @@
         <ion-card>
             <ion-card-header>
                 VIDEOS
-                <ion-icon style="float: right;" (click)="playVideo(video)" name="expand"></ion-icon>
+                <ion-icon *ngIf="isAndroid" style="float: right;" (click)="playVideo(video)" name="expand"></ion-icon>
             </ion-card-header>
             <video width="100%" controls poster="{{video.poster}}">
                 <source [src]="video.url" type="video/mp4">
