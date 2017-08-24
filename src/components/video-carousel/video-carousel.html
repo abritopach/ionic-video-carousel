@@ -4,8 +4,9 @@
 
     <ion-slide *ngFor="let video of data">
         <ion-card>
-            <ion-card-header (click)="playVideo(video)">
+            <ion-card-header>
                 VIDEOS
+                <ion-icon style="float: right;" (click)="playVideo(video)" name="expand"></ion-icon>
             </ion-card-header>
             <video width="100%" controls poster="{{video.poster}}">
                 <source [src]="video.url" type="video/mp4">
